@@ -4,7 +4,7 @@ const express = require('express'),
   logger = require('morgan'),
   bodyParser = require('body-parser');
 
-var env = process.env.NODE_ENV = process.env.NODE_ENV || 'development';
+const port = process.env.PORT || 3000;
 const publicPath = path.join(__dirname, '../public');
 
 var app = express();
@@ -18,7 +18,6 @@ app.use(bodyParser.json());
 app.use(express.static(publicPath));
 
 
-var port = process.eng.PORT || 3000;
 app.listen(port, () => {
   console.log('listening on port ' + port + '...');
 
