@@ -1,0 +1,15 @@
+{
+  "name": "blitzcube",
+  "version": "1.0.0",
+  "description": "ecommerce website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Omar Aragon",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.2",
+    "jade": "^1.11.0"
+  }
+}
