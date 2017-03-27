@@ -24,7 +24,7 @@ io.on('connection', (socket) => {
 });
 
 app.get('*', (req,res) => {
-  res.sendfile('./public/index/html');
+  res.sendFile('./index.html', {root: publicPath});
 });
 
 server.listen(port, () => {

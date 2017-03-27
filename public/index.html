@@ -1,27 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html data-ng-app="blitzcube">
 <head>
   <link rel="stylesheet", href="/css/bootstrap.css" />
+  <link rel="stylesheet", href="/css/component.css" />
+  <link rel="stylesheet", href="/css/style.css" />
+  <link rel="stylesheet", href="/css/flexslider.css" />
+  <link rel="stylesheet", href="/css/megamenu.css" />
+
   <meta charset="utf-8" />
-  <title>About Page</title>
+  <title>blitzcube</title>
 </head>
 <body>
-  <h1>welcome</h1>
+
+  <div data-ui-view="content"></div>
+  <div data-ui-view="footer"></div>
+
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/vendor/jquery/dist/jquery.js"></script>
+  <script src="/vendor/angular/angular.js"></script>
+  <script src="/vendor/angular-aria.min.js"></script>
+  <script src="/vendor/angular-resource.min.js"></script>
+  <script src="/vendor/angular-sanitize.min.js"></script>
+  <script src="/vendor/angular-ui-router.js"></script>
+
+  <script src="/app/app.js"></script>
+  <script src="/app/controllers/home.js"></script>
+
 </body>
 
-<script src="/socket.io/socket.io.js"></script>
-<script>
-var socket = io();
-socket.on('connect', () => {
-  console.log("connected to server");
-});
-</script>
 
-<script src="/vendor/jquery/dist/jquery.js"></script>
-<script src="/node_modules/angular/angular.min.js"></script>
-<script src="node_modules\angular-aria\angular-aria.min.js"></script>
-<script src="node_modules\angular-resource\angular-resource.min.js"></script>
-<script src="node_modules\angular-sanitize\angular-sanitize.min.js"></script>
-<script src="node_modules\angular-ui-router\release\angular-ui-router.min.js"></script>
+
+
 
 </html>
